@@ -35,4 +35,4 @@ jobs:
       run: ./build/my_program > program_output.txt
 
     - name: Check Output
-      run: diff /build/program_output.txt correct_output.txt
+      run: diff program_output.txt correct_output.txt
