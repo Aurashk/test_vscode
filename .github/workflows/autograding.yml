@@ -32,7 +32,7 @@ jobs:
       run: cd build && ctest
 
     - name: Run Program
-      run: ./build/your_program > program_output.txt
+      run: ./build/my_program > program_output.txt
 
     - name: Check Output
       run: diff /build/program_output.txt correct_output.txt
