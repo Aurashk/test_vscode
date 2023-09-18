@@ -1,11 +1,13 @@
 {
     "name": "IB9JHO Codespace",
-    "image": "ubuntu:latest",
+    "image": "mcr.microsoft.com/devcontainers/cpp",
     "customizations": {
         "vscode": {
             "extensions": [
                 "ms-vscode.cpptools",
-                "ms-vscode.cmake-tools"
+                "ms-vscode.cmake-tools",
+                "github.classroom",
+                "brobeson.ctest-lab"
             ]
         }
     }
