@@ -1,0 +1,13 @@
+{
+    "tests": [
+        {
+            "name": "Output comparison",
+            "setup": "",
+            "run": "diff program_output.txt .github/classroom/correct_output.txt",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "points": 10
+        }
+    ]
+}
