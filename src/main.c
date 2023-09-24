@@ -1,6 +1,7 @@
-#include "stdio.h"
+#include <stdio.h>
 
 int main ()
 {
-    printf("My C Compiler is working!");
+    /* we want to print "My C Compiler is working!"" instead*/
+    printf("Change me before you submit the assignment!");
 }

@@ -1,3 +1,5 @@
 build/
 output/
 .vscode/settings.json
+tests/IO/*
+!tests/IO/correct_output.txt

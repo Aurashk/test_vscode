@@ -20,6 +20,5 @@ add_executable(my_program ${SRC_FILES})
 
 ####################### TESTING STUFF STARTS HERE ###########################################################
 
-add_subdirectory(extern/googletest)
 enable_testing()
 add_subdirectory(tests)

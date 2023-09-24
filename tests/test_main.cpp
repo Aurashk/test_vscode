@@ -1,24 +1,18 @@
-#include <iostream>
-#include <fstream>
-#include <string>
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 
-int main() {
-    std::ifstream main_out("program_output.txt");
-    std::ifstream expected(".github/classroom/correct_output.txt");
+#include <filesystem>
 
-    if (!main_out.is_open() || !expected.is_open()) {
-        std::cerr << "Failed to open one or both files" << std::endl;
-        return 1;
-    }
+#include "compare_files.hpp"
+#include "capture_output.hpp"
 
-    std::string main_output((std::istreambuf_iterator<char>(main_out)), std::istreambuf_iterator<char>());
-    std::string expected_output((std::istreambuf_iterator<char>(expected)), std::istreambuf_iterator<char>());
+TEST_CASE("Check Program Output", "[compare_output]") {
+    const std::filesystem::path root = PROJECT_ROOT_DIR;
+    
+    const std::filesystem::path cmd = root / "build" / "my_program";
+    const std::filesystem::path actual = root / "tests" / "IO" / "program_output.txt";
+    const std::filesystem::path expected = root / "tests" / "IO" / "correct_output.txt";
 
-    if (main_output != expected_output) {
-        std::cerr << "Output does not match expected result" << std::endl;
-        return 1;
-    }
-
-    std::cout << "Test passed!" << std::endl;
-    return 0;
+    REQUIRE_NOTHROW(capture_output(cmd.string(), actual.string()));
+    REQUIRE_NOTHROW(compare_files(actual.string(), expected.string()));
 }

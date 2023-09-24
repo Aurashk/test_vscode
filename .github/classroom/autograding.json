@@ -3,10 +3,7 @@
         {
             "name": "Output comparison",
             "setup": "",
-            "run": "diff program_output.txt .github/classroom/correct_output.txt",
-            "input": "",
-            "output": "",
-            "comparison": "exact",
+            "run": "cd build && ctest --output-on-failure",
             "timeout": 1,
             "points": 10
         }

@@ -29,11 +29,5 @@ jobs:
     - name: Build Project
       run: cmake --build build
 
-    - name: Run Tests (if any)
-      run: cd build && ctest
-
-    - name: Run Program
-      run: ./build/my_program > program_output.txt
-
     - name: Autograding
       uses: education/autograding@v1
