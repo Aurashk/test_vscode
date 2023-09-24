@@ -1,0 +1,39 @@
+name: Autograding
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Setup CMake and Make
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake make
+
+    - name: Create Build Directory
+      run: mkdir build
+
+    - name: Configure CMake
+      run: cmake -S . -B build
+
+    - name: Build Project
+      run: cmake --build build
+
+    - name: Run Tests (if any)
+      run: cd build && ctest
+
+    - name: Run Program
+      run: ./build/my_program > program_output.txt
+
+    - name: Autograding
+      uses: education/autograding@v1
