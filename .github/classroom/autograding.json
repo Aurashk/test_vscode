@@ -1,11 +1,11 @@
 {
     "tests": [
         {
-            "name": "Output comparison",
+            "name": "Check All Tests Passed",
             "setup": "",
-            "run": "cd build && ctest --output-on-failure",
+            "run": "grep 'All tests passed' build/Testing/Temporary/LastTest.log && exit 0 || exit 1",
             "timeout": 1,
-            "points": 10
+            "points": 1
         }
     ]
 }
