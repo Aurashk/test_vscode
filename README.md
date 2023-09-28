@@ -24,9 +24,18 @@ statement in our code as highlighted in orange.
 # Testing
 Assignments are marked automatically using tests. You can run the tests in vscode by going to the tests tab and clicking the play button.
 ![running_tests](https://github.com/Aurashk/test_vscode/assets/9390150/bd73917c-e4c0-43f4-bc28-e4920f088b3a)
-The tests are failing because the output of our program is not what we expect it to be. The correct output can be found in tests/IO/correct_output.txt
-Modify the code output is correct and rerun the tests to verify that the output of the program is correct.
+The tests are failing because the output of our program is not what we expect it to be. The correct output can be found in tests/IO/correct_output.txt.
+Correct the code and rerun the tests to verify that the output of the program is correct.
 
 # Submission
 
+Once you have confirmed all the tests are passing. You can submit an assignment by pushing (updating) the repository with all your changes.
+![submit_assignment](https://github.com/Aurashk/test_vscode/assets/9390150/55b9a810-9af9-4963-9a75-eb7edb31eea9)
+
+Once you have submitted your assignment and all the tests are passing you should notice the red cross will change to a green tick in 
+github.
++ Tests are not passing
+![tests_not_passing_repo](https://github.com/Aurashk/test_vscode/assets/9390150/1a45c2cf-903b-4e5f-bfa2-471e28e7349d)
++ Tests are passing
+![tests_passing_in_repo](https://github.com/Aurashk/test_vscode/assets/9390150/2c339c18-a7e3-4183-bcf5-8a1299e4b9e9)
 
