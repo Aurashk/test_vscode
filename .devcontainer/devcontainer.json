@@ -6,9 +6,8 @@
             "extensions": [
                 "ms-vscode.cpptools",
                 "ms-vscode.cmake-tools",
-                "github.classroom",
-                "brobeson.ctest-lab",
-                "GitHub.codespaces"
+                "GitHub.codespaces",
+                "brobeson.ctest-lab"
             ]
         }
     }
